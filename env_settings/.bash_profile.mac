@@ -1,0 +1,9 @@
+##############
+# MAC OS specific configs
+##############
+
+
+### Git and Github stuff
+# Autocomplete
+source ~/scripts/git-completion.bash
+
