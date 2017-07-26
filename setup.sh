@@ -7,3 +7,7 @@ cp scripts/git-completion.bash ~/scripts
 
 ### Install git config
 cp env_settings/.gitconfig ~/
+
+
+### Install vi settings
+cp env_settings/.exrc ~/.exrc
