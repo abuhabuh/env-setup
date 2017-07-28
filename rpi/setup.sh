@@ -1,4 +1,4 @@
 # run common setup first
-./../common/setup.sh
+(cd ../common ; ./setup.sh)
 
 

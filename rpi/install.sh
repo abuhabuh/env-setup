@@ -1,3 +1,3 @@
 # Run common install first
-./../common/install.sh
+(cd ../common; ./install.sh)
 

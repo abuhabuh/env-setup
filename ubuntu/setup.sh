@@ -1,2 +1,2 @@
 # Setup common components first
-./../common/setup.sh
+(cd ../common; ./setup.sh)
