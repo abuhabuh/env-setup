@@ -1,8 +1,8 @@
 ### Install scripts
-if [ -d "~/scripts" ]; then
+if [ ! -d "~/scripts" ]; then
   mkdir ~/scripts
 fi
-cp scripts/git-completion.bash ~/scripts
+cp scripts/git-completion.bash ~/scripts/
 
 
 ### Install git config
