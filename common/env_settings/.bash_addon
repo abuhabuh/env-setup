@@ -8,3 +8,5 @@ alias ls='ls -lhF'
 HISTTIMEFORMAT="%d/%m/%y %T "
 
 export CLICOLOR=1
+
+source ~/scripts/git-completion.bash
