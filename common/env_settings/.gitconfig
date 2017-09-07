@@ -5,5 +5,6 @@
 	st = status
 	br = branch
 	co = checkout
+	cl = remote prune origin
 [core]
 	editor = vim
