@@ -16,6 +16,9 @@ BASH_FILE="$HOME/.bash_profile"
 if [ -f $HOME/.bashrc ]; then
 	BASH_FILE="$HOME/.bashrc"
 fi
+if [ ! -f $BASH_FILE ]; then
+	touch $BASH_FILE
+fi
 cp env_settings/.bash_addon $HOME/
 
 if grep -q bash_addon $BASH_FILE; then 
@@ -34,6 +37,6 @@ else
 	echo "INFO: bash init installing ssh-agent"
 	echo "# starting ssh agent for adding to ssh keychain" >> $BASH_FILE
 	echo "eval \$(ssh-agent)" >> $BASH_FILE
-	echo "# add keys here e.g. ssh-add ~/.ssh/github_rsa" >> $BASH_FILE
+	echo "ssh-add ~/.ssh/*" >> $BASH_FILE
 fi
 

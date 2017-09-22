@@ -1,5 +1,0 @@
-# start ssh agent
-eval $(ssh-agent)
-
-### Append ssh-add for keys here
-# e.g. ssh-add ~/.ssh/github_rsa
