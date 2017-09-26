@@ -26,19 +26,11 @@ if grep -q bash_addon $BASH_FILE; then
 	echo "INFO: bash init already has addon trigger"
 else
 	echo "INFO: bash init installing addon trigger"
-	if [ $BASH_FILE = "$HOME/.bashrc" ]; then
-		echo "~/.bash_addon" >> $BASH_FILE
-	else
-		echo "source ~/.bash_addon" >> $BASH_FILE
-	fi
+  echo "source ~/.bash_addon" >> $BASH_FILE
 fi
 if grep -q bash_ssh $BASH_FILE; then 
 	echo "INFO: bash init already has ssh trigger"
 else
 	echo "INFO: bash init installing ssh trigger"
-	if [ $BASH_FILE = "$HOME/.bashrc" ]; then
-		echo "~/.bash_ssh" >> $BASH_FILE
-	else
-		echo "source ~/.bash_ssh" >> $BASH_FILE
-	fi
+  echo "source ~/.bash_ssh" >> $BASH_FILE
 fi
