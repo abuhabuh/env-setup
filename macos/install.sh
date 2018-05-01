@@ -1,7 +1,7 @@
 #!/bin/bash
 # Installs programs for MacOS
 
-# NOTE: don't install common components script because macos 
+# NOTE: don't install common components script because macos
 #   does not have apt-get
 
 ### macos cmds
@@ -16,6 +16,11 @@ PIP=(
 	pip
 	'sudo easy_install pip'
 	)
+MKVIRTUALENV=(
+	mkvirtualenv
+	mkvirtualenv
+	'pip install virtualenvwrapper'
+)
 VAGRANT=(
 	vagrant
 	vagrant
@@ -33,6 +38,7 @@ PROGRAMS_LIST=(
 	VBOX
 	VAGRANT
 	PIP
+	MKVIRTUALENV
 )
 
 
