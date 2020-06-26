@@ -4,11 +4,21 @@ cp scripts/git-completion.bash $HOME/scripts/
 
 
 ### Install git config
-cp env_settings/gitconfig $HOME/.gitconfig
+if [ ! -f "$HOME/.gitconfig" ] ; then
+  echo "INSTALLING $HOME/.gitconfig"
+  cp env_settings/gitconfig $HOME/.gitconfig
+else
+  echo "INFO: $HOME/.gitconfig exists so skipping install"
+fi
 
 
 ### Install vi settings
-cp env_settings/exrc $HOME/.exrc
+if [ ! -f "$HOME/.exrc" ] ; then
+  echo "INSTALLING $HOME/.exrc"
+  cp env_settings/exrc $HOME/.exrc
+else
+  echo "INFO: $HOME/.exrc exists so skipping install"
+fi
 
 
 ### Install bash addon to bashrc or bash_profile scripts
