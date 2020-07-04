@@ -1,0 +1,4 @@
+### Common Config ###
+# Terminal config
+alias ls="ls -F"
+

@@ -27,7 +27,8 @@ if [ -f $HOME/.bashrc ]; then
 	BASH_FILE="$HOME/.bashrc"
 fi
 if [ ! -f $BASH_FILE ]; then
-	touch $BASH_FILE
+	echo "INSTALL: ~/.bash_profile"
+	cp scripts/bash_profile $BASH_FILE
 fi
 cp env_settings/bash_addon $HOME/.bash_addon
 cp env_settings/bash_ssh $HOME/.bash_ssh
