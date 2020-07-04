@@ -3,7 +3,7 @@
 ############
 
 ### common cmds
-alias ls='ls -lhF'
+alias ls='ls --color=auto -lhF'
 # Set time to display when running 'history' command
 HISTTIMEFORMAT="%d/%m/%y %T "
 
