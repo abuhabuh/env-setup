@@ -6,6 +6,10 @@ set expandtab
 " show line numbers
 set number
 
+" exclude certain common folders from wildcard expansion (
+" during search, etc.)
+set wildignore+=venv/*
+
 syntax on
 
 
