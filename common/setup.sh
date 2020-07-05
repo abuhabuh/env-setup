@@ -12,15 +12,6 @@ else
 fi
 
 
-### Install vi settings
-if [ ! -f "$HOME/.exrc" ] ; then
-  echo "INSTALLING $HOME/.exrc"
-  cp env_settings/exrc $HOME/.exrc
-else
-  echo "INFO: $HOME/.exrc exists so skipping install"
-fi
-
-
 ### Install bash addon to bashrc or bash_profile scripts
 BASH_FILE="$HOME/.bash_profile"
 if [ -f $HOME/.bashrc ]; then
