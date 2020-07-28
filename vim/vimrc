@@ -12,6 +12,8 @@ set wildignore+=venv/*
 
 syntax on
 
+" bid ctrl p to `Files`
+map <c-p> :Files<cr>
 
 """"""""""""""""""""""""""""""""""
 " vim plugins (managed by plug.vim
