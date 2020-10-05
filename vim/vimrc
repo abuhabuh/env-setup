@@ -30,6 +30,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+" fzf and Rg requires `brew install fzf` & `brew install ripgrep`
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " vim-gutentags requires ctags installed from homebrew - macos native version
