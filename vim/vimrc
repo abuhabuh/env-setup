@@ -17,6 +17,9 @@ syntax on
 " bid ctrl p to `Files`
 map <c-p> :Files<cr>
 
+" Auto remove trailing white space on save
+autocmd BufWritePre * %s/\s\+$//e
+
 """"""""""""""""""""""""""""""""""
 " vim plugins (managed by plug.vim
 "
@@ -45,4 +48,6 @@ let g:gutentags_ctags_exclude = [
       \ 'bin',
       \ '*/node_modules/*',
       \ ]
+
+let g:ctrlp_custom_ignore = 'node_modules\|venv\' 
 
