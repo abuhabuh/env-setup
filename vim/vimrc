@@ -20,6 +20,11 @@ map <c-p> :Files<cr>
 " Auto remove trailing white space on save
 autocmd BufWritePre * %s/\s\+$//e
 
+" Setup tabs per file type
+autocmd FileType javascriptreact setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
+
 """"""""""""""""""""""""""""""""""
 " vim plugins (managed by plug.vim
 "
@@ -49,5 +54,5 @@ let g:gutentags_ctags_exclude = [
       \ '*/node_modules/*',
       \ ]
 
-let g:ctrlp_custom_ignore = 'node_modules\|venv\' 
+let g:ctrlp_custom_ignore = 'node_modules\|venv\'
 
