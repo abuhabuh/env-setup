@@ -1,16 +1,11 @@
-### Install scripts
+### Create scripts dir
 mkdir -p $HOME/scripts
-cp scripts/git-completion.bash $HOME/scripts/
-
 
 ### Install git config
-if [ ! -f "$HOME/.gitconfig" ] ; then
-  echo "INSTALLING $HOME/.gitconfig"
-  cp env_settings/gitconfig $HOME/.gitconfig
-else
-  echo "INFO: $HOME/.gitconfig exists so skipping install"
-fi
-
+echo ">> Setting up Git configs"
+pushd ../apps/git
+./setup.sh
+popd
 
 ### Install bash addon to bashrc or bash_profile scripts
 BASH_FILE="$HOME/.bash_profile"
