@@ -10,3 +10,13 @@ HISTTIMEFORMAT="%d/%m/%y %T "
 export CLICOLOR=1
 
 source ~/scripts/git-completion.bash
+
+
+# Used for Vim searching
+# - Requires: ripgrep, fzf (brew install)
+# - Purpose: sets ripgrep as the file searcher for fzf in vim
+#   See https://github.com/junegunn/fzf.vim#commands
+if type rg &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='rg --files --hidden'
+fi
+
