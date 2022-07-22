@@ -12,7 +12,14 @@ set ruler
 " during search, etc.)
 set wildignore+=venv/*
 
+""" Syntax highlighting and stuff
 syntax on
+
+" Typescript syntax highlighting is crazy slow so need to set re=0
+" https://jameschambers.co.uk/vim-typescript-slow
+set re=0
+""" END Syntax highlighting and stuff
+
 
 " bid ctrl p to `Files`
 map <c-p> :Files<cr>
@@ -55,7 +62,16 @@ Plug 'junegunn/fzf.vim'
 """ vim-gutentags requires ctags installed from homebrew - macos native version
 " does not work
 Plug 'ludovicchabant/vim-gutentags'
+
+""" git blame in vim
+" https://github.com/zivyangll/git-blame.vim
+Plug 'zivyangll/git-blame.vim'
+
 call plug#end()
+
+"""" git blame in vim
+" https://github.com/zivyangll/git-blame.vim
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 let g:gutentags_ctags_exclude = [
       \ '*.git',
